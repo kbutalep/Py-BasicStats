@@ -12,13 +12,14 @@ from typing import List
 
 
 
-def zcount(list: List[]) -> float:
+def zcount(list: List[float]) -> float:
     """
     Count of numbers in list
     :param list:
     :return:
     """
-    pass
+    return(len(list))
+
 
 def zmean(list: List[]) -> float:
     """
@@ -26,7 +27,8 @@ def zmean(list: List[]) -> float:
     :param list:
     :return:
     """
-    pass
+    return sum(list) / zcount(list)
+
 
 def zmode(list: List[]) -> float:
     """
@@ -35,6 +37,7 @@ def zmode(list: List[]) -> float:
     :return:
     """
     pass
+
 
 def zmedian(list: List[]) -> float:
     """
