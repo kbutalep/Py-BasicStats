@@ -21,7 +21,7 @@ def zcount(list: List[float]) -> float:
     return(len(list))
 
 
-def zmean(list: List[]) -> float:
+def zmean(list: List[float]) -> float:
     """
     mean = sum(data0) / count(data0)
     :param list:
@@ -30,56 +30,27 @@ def zmean(list: List[]) -> float:
     return sum(list) / zcount(list)
 
 
-def zmode(list: List[]) -> float:
+def zmode(list: List[float]) -> float:
     """
     the mode is the most common value in list
     :param list:
     :return:
     """
-    pass
+    return max(set(list), key=list.count)
 
 
-def zmedian(list: List[]) -> float:
+def zmedian(list: List[float]) -> float:
     """
     The median is the middle value
     :param list:
     :return:
     """
-    pass
+    sorted_number = sorted(list)
+    list_len = len(list)
+    index = (list_len - 1) // 2
+    if list_len % 2 == 0:
+        return sorted_number[index]
+    else:
+        return(sorted_number[index] + sorted_number[index +1])/2
 
-def zvariance(list: List[]) -> float:
-    """
-    Variance measures how far a data set is spread out.
-    It is mathematically defined as the average of the squared differences from the mean.
-    :param list:
-    :return:
-    """
-    pass
 
-def zstddev(list: List[]) -> float:
-    """
-    The standard deviation is just the square root of the variance of a list,
-    std_dev = square-root(variance(data0))
-    :param list:
-    :return:
-    """
-    pass
-
-def zstderr(list: List[]) -> float:
-    """
-    This is simply the standard deviation divided by the square root of the count...
-    std_err = standard_deviation(data0) / square_root( count(data0) )
-
-    :param list:
-    :return:
-    """
-    pass
-
-def zcorr(listx: List[], listy: List[]) -> float:
-    """
-    correlation is the covariance divided by the stddev of each list multiplied together
-    :param listx:
-    :param listy:
-    :return:
-    """
-    pass
